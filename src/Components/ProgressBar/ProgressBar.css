@@ -1,26 +1,51 @@
 .progressBar {
+    background: rgba(255,255,255,0.5);
+    border: 1px solid black;
     margin: 10px;
-    padding: 10px;
+    padding: 5px;
     width: 100%;
     height: 10px;
 }
 
-.progressBar-info {
+.filler {
+    height: 10px;
+    width: 100%;
+    transition: 1s;
+}
+
+.striped{
+    background-image: repeating-linear-gradient(
+        45deg, transparent 0px,
+        transparent 10px,
+        rgba(255,255,255,0.5) 10px,
+        rgba(255,255,255,0.5) 20px
+    );
+    background-size: 56px 30px;
+    background-position: 0px 0px;
+}
+
+.info {
     background-color: blue;
 }
 
-.progressBar-success {
+.success {
     background-color: green;
 }
 
-.progressBar-warning {
+.warning {
     background-color: yellow;
 }
 
-.progressBar-danger {
+.danger {
     background-color: red;
 }
 
-.progressBar-stripes{
-    background-image: repeating-linear-gradient(45deg, transparent 0px, transparent 10px, rgba(255,255,255,0.5) 10px,rgba(255,255,255,0.5) 20px);
+.animated{
+    animation: move 10s linear infinite;
+    transition: 1s;
+}
+
+@keyframes move {
+    from{background-position: 0px 0px;}
+    to{background-position: 100% 100%;}
 }

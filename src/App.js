@@ -47,31 +47,34 @@ class App extends React.Component {
                     <Modal.Body>My Modal Body</Modal.Body>
                     <Modal.Footer>My Modal Footer</Modal.Footer>
                 </Modal>
+                }
                 <Progressbar
-                    progress='25'
+                    progress={25}
+                    striped={false}
+                    animated={true}
                     state='info'
-                    striped='true'
                     />
                 <Progressbar
-                    progress='50'
+                    progress={50}
+                    striped={true}
+                    animated={false}
                     state='success'
-                    striped='true'
                     />
                 <Progressbar
-                    progress='75'
+                    progress={75}
+                    striped={true}
+                    animated={true}
                     state='warning'
-                    striped='true'
                     />
                 <Progressbar
-                    progress='100'
+                    progress={100}
+                    striped={true}
+                    animated={true}
                     state='danger'
-                    striped='true'
-
                     />
             </div>
         );
     }
-
 };
 
 ReactDOM.render(<App />, document.getElementById('root'));

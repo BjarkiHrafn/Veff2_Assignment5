@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Modal from './Modal/Modal';
+import Modal from './Components/Modal/Modal';
 import ButtonCM from './Button/ButtonCM';
 //const{Title, Body, Footer} = Modal;
 

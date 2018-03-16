@@ -1,27 +1,42 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import styles from './Modal.css';
+
+
+console.log("styles: ", styles);
 
 class Modal extends React.Component{
 
+
     constructor(props) {
         super(props);
-        console.log(props);
     }
 
     render() {
         return (
-            <div>{this.props.children}</div>
+            <div className = {styles.modalContent}>{this.props.children}</div>
         );
     }
 
 };
 
-Modal.Title = (props) => { return (<div className = "">{props.children}</div>) };
-Modal.Body = (props) => { return (<div>{props.children}</div>) };
+Modal.Title = (props) => {
+    return (
+        <div>{props.children}</div>
+    )
+};
+
+Modal.Body = (props) => {
+
+    return (
+        <div>{props.children}</div>
+    )
+};
+
 Modal.Footer = (props) => {
     if(props.isOpen) {
         return (
+
             <div>{props.children}</div>
         )
     } else {

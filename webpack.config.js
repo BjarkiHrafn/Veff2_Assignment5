@@ -9,9 +9,11 @@ module.exports = {
         publicPath: '/'
     },
     module: {
+
         rules: [
             { enforce: 'pre', test: /\.js$/, exclude: /node_modules/, use: 'eslint-loader', },
             { test: /\.js$/, exclude: /node_modules/, use: 'babel-loader' },
+            { test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192' },
             {
               test: /\.css$/,
               use: [

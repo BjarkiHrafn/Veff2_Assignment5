@@ -1,0 +1,26 @@
+.progressBar {
+    margin: 10px;
+    padding: 10px;
+    width: 100%;
+    height: 10px;
+}
+
+.progressBar-info {
+    background-color: blue;
+}
+
+.progressBar-success {
+    background-color: green;
+}
+
+.progressBar-warning {
+    background-color: yellow;
+}
+
+.progressBar-danger {
+    background-color: red;
+}
+
+.progressBar-stripes{
+    background-image: repeating-linear-gradient(45deg, transparent 0px, transparent 10px, rgba(255,255,255,0.5) 10px,rgba(255,255,255,0.5) 20px);
+}

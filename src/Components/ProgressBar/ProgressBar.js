@@ -2,8 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Progressbar.css';
 
-const ProgressBar = ({state, striped}) => {
+const ProgressBar = ({progress, state, striped}) => {
     console.log('state', state);
+    console.log('progress', progress);
     var stripes = '';
     if(striped) {
         stripes = 'striped'
@@ -15,6 +16,7 @@ const ProgressBar = ({state, striped}) => {
 }
 
 ProgressBar.propTypes = {
+    progress: PropTypes.range('0..100'),
     state: PropTypes.oneOf(['info', 'success', 'warning', 'danger']),
     striped: PropTypes.bool
 }

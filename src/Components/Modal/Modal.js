@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import styles from './Modal.css';
 
 
-console.log("styles: ", styles);
-
 class Modal extends React.Component{
 
 
@@ -15,7 +13,7 @@ class Modal extends React.Component{
     render() {
         return (
             <div className = {styles.modal}>
-                <button onClick = {this.props.onClose}>x</button>
+                <span className = {styles.close} onClick = {this.props.onClose}>&times;</span>
                 <div className = {styles.modalContent}>{this.props.children}</div>
             </div>
         );

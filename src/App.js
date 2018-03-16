@@ -6,7 +6,6 @@ import Modal from './Components/Modal/Modal';
 //const{Title, Body, Footer} = Modal;
 import ModalStyle from './Components/Modal/Modal.css';
 
-console.log(ModalStyle);
 
 class App extends React.Component {
 

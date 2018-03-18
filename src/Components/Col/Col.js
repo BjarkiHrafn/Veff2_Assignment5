@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import styles from './Col.css'
 
 const Col = ({size, children}) => {
-    console.log('size: ', size);
     return (
         <div style={{width: `${100/(12/size)}%`}} className={styles.Col}>{children}</div>
     )

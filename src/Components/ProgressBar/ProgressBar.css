@@ -1,6 +1,6 @@
 .progressBar {
     background: rgba(255,255,255,0.5);
-    box-shadow: 1px 2px 4px 1px rgba(0,0,0,0.2);
+    box-shadow: inset 1px 2px 4px 1px rgba(0,0,0,0.2);
     margin: 10px;
     padding: 5px;
     width: 95%;
@@ -28,18 +28,22 @@
 
 .info {
     background-color: blue;
+    box-shadow: inset 1px 2px 4px 1px rgba(0,0,0,0.2);
 }
 
 .success {
     background-color: green;
+    box-shadow: inset 1px 2px 4px 1px rgba(0,0,0,0.2);
 }
 
 .warning {
     background-color: yellow;
+    box-shadow: inset 1px 2px 4px 1px rgba(0,0,0,0.2);
 }
 
 .danger {
     background-color: red;
+    box-shadow: inset 1px 2px 4px 1px rgba(0,0,0,0.2);
 }
 
 .animated{

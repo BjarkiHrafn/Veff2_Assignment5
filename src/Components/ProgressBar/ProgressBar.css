@@ -1,16 +1,18 @@
 .progressBar {
     background: rgba(255,255,255,0.5);
-    border: 1px solid black;
+    box-shadow: 1px 2px 4px 1px rgba(0,0,0,0.2);
     margin: 10px;
     padding: 5px;
-    width: 100%;
+    width: 95%;
     height: 10px;
+    border-radius: 50px;
 }
 
 .filler {
     height: 10px;
     width: 100%;
     transition: 1s;
+    border-radius: 50px;
 }
 
 .striped{

@@ -4,6 +4,7 @@
     transition: 0.3s;
     width: 30%;
     height: 20%;
+    float:left;
 }
 
 /* On mouse-over, add a deeper shadow */

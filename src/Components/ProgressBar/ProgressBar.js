@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './Progressbar.css';
+import styles from './ProgressBar.css';
 
 
 const ProgressBar = ({progress, striped, animated, state}) => {
-    
+
     var stripes = '';
     var animate = '';
     if(striped) {

@@ -4,10 +4,7 @@ import styles from './Progressbar.css';
 
 
 const ProgressBar = ({progress, striped, animated, state}) => {
-
-    console.log('state: ', state);
-    console.log('progress: ', progress);
-    console.log('animated: ', animated);
+    
     var stripes = '';
     var animate = '';
     if(striped) {

@@ -6,6 +6,7 @@ import NameCard from './Components/NameCard/NameCard';
 //const{Title, Body, Footer} = Modal;
 import ModalStyle from './Components/Modal/Modal.css';
 import ReactFileReader from 'react-file-reader';
+import Carousel from './Components/Carousel/Carousel.js';
 
 
 import Progressbar from './Components/Progressbar/Progressbar';
@@ -55,27 +56,32 @@ class App extends React.Component {
                     striped={false}
                     animated={true}
                     state='info'
-                    />
+                />
                 <Progressbar
                     progress={50}
                     striped={true}
                     animated={false}
                     state='success'
-                    />
+                />
                 <Progressbar
                     progress={75}
                     striped={true}
                     animated={true}
                     state='warning'
-                    />
+                />
                 <Progressbar
                     progress={100}
                     striped={true}
                     animated={true}
                     state='danger'
-                    />
+                />
 
                 <NameCard name="Arnar Leifsson" email="arnarl@ru.is" telephone="+357-777-7777" imageUrl="http://jpsierens.com/wp-content/uploads/2015/02/goku_by_maffo1989-d4vxux4.png"/>
+                <Carousel
+                    images = {['https://yt3.ggpht.com/-gqWw2ln-AFM/AAAAAAAAAAI/AAAAAAAAAAA/p6f_Yd_96Mk/s900-c-k-no-mo-rj-c0xffffff/photo.jpg',
+                        'http://www.clipartbest.com/cliparts/xig/LzL/xigLzLA6T.jpg'
+                    ]}
+                    size = 'medium'/>
             </div>
         );
     }

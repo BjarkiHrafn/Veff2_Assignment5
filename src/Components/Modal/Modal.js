@@ -35,16 +35,10 @@ Modal.Body = (props) => {
 };
 
 Modal.Footer = (props) => {
-    if(props.isOpen) {
-        return (
+    return(
+        <div>{props.children}</div>
+    )
 
-            <div>{props.children}</div>
-        )
-    } else {
-        return(
-            <div></div>
-        )
-    }
 };
 
 Modal.propTypes = {

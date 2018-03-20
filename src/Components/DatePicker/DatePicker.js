@@ -23,7 +23,6 @@ class DatePicker extends React.Component {
 
     componentWillMount() {
         var initialDate = new Date();
-        console.log(initialDate.getMonth());
         this.setState({
             currentMonth: initialDate.getMonth(),
             currentYear: initialDate.getFullYear()
@@ -114,8 +113,6 @@ class DatePicker extends React.Component {
         const totalDays = new Date(this.state.currentYear, this.state.currentMonth+1, 0).getDate();
         //console.log(new Date(year, month, 31).toLocaleDateString());
         //var arr = Array.apply(1, {length: totalDays+1}).map(Number.call, Number);
-        console.log("month: ", month);
-        console.log("total days: ", totalDays);
 
         var arr = [];
         for(let i = 0; i <= totalDays; i++) {
@@ -150,6 +147,10 @@ class DatePicker extends React.Component {
 DatePicker.propTypes = {
     onDatePick: PropTypes.func.isRequired,
     locale: PropTypes.string.isRequired,
+}
+
+DatePicker.defaultProps = {
+    locale: 'is-IS'
 }
 
 export default DatePicker;

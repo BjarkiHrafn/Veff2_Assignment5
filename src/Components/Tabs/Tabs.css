@@ -1,0 +1,39 @@
+
+.tabContainer {
+    color: blue;
+}
+
+.tab {
+
+}
+
+.dark {
+    color: white;
+    background-color: black;
+    margin-left: 2px;
+    border: none;
+}
+
+.dark:focus {
+    background-color: #616161 ;
+}
+
+.light {
+    color: black;
+    background-color: white;
+    margin-left: 2px;
+    border-radius: 25px;
+    border: 2px solid #73AD21;
+}
+
+.light:focus {
+    background-color: #DFDFDF;
+}
+
+.horizontal {
+
+}
+
+.vertical {
+    display: block;
+}

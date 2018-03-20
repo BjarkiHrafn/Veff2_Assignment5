@@ -1,0 +1,54 @@
+.timePicker {
+    border: none;
+    font-size: 24px;
+    width: 30px;
+    height: 40px;
+    box-shadow:  0px 0px 0px 0px rgba(0,0,0,0.2);
+}
+
+.timePicker:nth-child(1) {
+    margin-left: 5px
+}
+.timePicker:nth-child(3) {
+    margin-left: 3px
+}
+
+.inBetween{
+    display: inline;
+    font-size: 24px;
+    width: 10px;
+}
+
+.timePickerContainer {
+    margin: 10px;
+    box-shadow:  1px 2px 4px 1px rgba(0,0,0,0.2);
+    width: 90px;
+}
+
+.timePickerContainerAMPM {
+    margin: 10px;
+    box-shadow:  1px 2px 4px 1px rgba(0,0,0,0.2);
+    width: 140px;
+}
+
+.AMPM {
+    border: none;
+    font-size: 24px;
+    margin-left: 5px;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+    outline: none;
+}
+
+select:hover {
+    cursor: pointer;
+}
+
+select option[disabled] {
+    display: none;
+}

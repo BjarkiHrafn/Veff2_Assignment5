@@ -4,8 +4,6 @@ import styles from './TimePicker.css';
 
 class TimePicker extends React.Component {
     constructor(props) {
-
-        console.log('hello');
         super(props);
         this.state = {
             minutesArr: [],
@@ -74,9 +72,6 @@ class TimePicker extends React.Component {
     }
 
     render() {
-
-        console.log(this.state.hoursArr);
-
         if(this.props.format == 12) {
             return (
                 <div className={styles.timePickerContainerAMPM}>

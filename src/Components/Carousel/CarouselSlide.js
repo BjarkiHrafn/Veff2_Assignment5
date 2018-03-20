@@ -12,7 +12,7 @@ class CarouselSlide extends React.Component {
         if(this.props.index == this.props.slideIndex) {
             return(
                 <li className = {styles.carouselSlideActive}>
-                    <img src = {this.props.slide} />
+                    <div className = {styles.imgStyle} style={{ backgroundImage: `url(${this.props.slide})`}}></div>
                 </li>
             );
         } else {

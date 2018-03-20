@@ -1,21 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './Tabs.css';
 
-export default class Tab extends React.Component {
-    constructor(props) {
-        super(props);
-    }
+const Tab = ({selectionKey, title, theme, layout}) => {
 
-    render() {
-        return(
-            <div>
-                hello
-            </div>
-        )
-    }
+    return(
+        <button className = {`${styles[`${theme}`]} ${styles[`${layout}`]}`}>
+            {title}
+        </button>
+    )
 
 };
 
-Tab.propTypes = {
-    selectionKey: PropTypes.number.isRequired,
-}
+export default Tab;

@@ -24,7 +24,7 @@ class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            isOpen: false,
+            isOpen: true,
             time: 'time',
             date: new Date(),
             tab: 0,
@@ -32,8 +32,8 @@ class App extends React.Component {
 
         this.openModal = this.openModal.bind(this);
         this.closeModal = this.closeModal.bind(this);
-        this.onDatePick = this.onDatePick.bind(this);
     }
+
 
     openModal() {
         this.setState({isOpen: true});
@@ -43,13 +43,10 @@ class App extends React.Component {
         this.setState({isOpen: false});
     }
 
-    onDatePick(item) {
-        console.log("item: ", item);
-    }
-
 
     render() {
         //<Modal.Body>My Modal Body</Modal.Body>
+        const day = this.state.date;
 
         //<Modal.Footer>My Modal Footer</Modal.Footer>
 
@@ -57,8 +54,7 @@ class App extends React.Component {
         return (
             <div>
                 <h1>Modal</h1>
-                <button onClick = {this.openModal}>open zel modal</button>
-                {this.state.isOpen &&
+
                 <Modal
                     isOpen = {this.state.isOpen}
                     onClose = {() => this.setState({ isOpen: false })}>
@@ -66,7 +62,7 @@ class App extends React.Component {
                     <Modal.Body>My Modal Body</Modal.Body>
                     <Modal.Footer>My Modal Footer</Modal.Footer>
                 </Modal>
-                }
+                
 
                 <Progressbar
                     progress={25}
@@ -148,19 +144,27 @@ class App extends React.Component {
                     interval={2} />
 
                 <DatePicker
-                    onDatePick = {date => this.setState({date})}
+                    onDatePick = {date => this.setState({ date })}
                     locale = "en-EN" />
 
+                <h3>{day.toLocaleDateString()}</h3>
+
                 <Tabs
-                    theme = "dark"
+                    theme = "light"
                     layout = "horizontal"
                     onSelect = {newTab => this.setState({ tab: newTab })}
                     currentSelectedTab = { this.state.tab }>
                     <Tab selectionKey = {1} title = "Tab 1">
                         Content 1
                     </Tab>
+                    <Tab selectionKey = {2} title = "Tab 2">
+                        Content 2
+                    </Tab>
+                    <Tab selectionKey = {3} title = "Tab 3">
+                        Content 3
+                    </Tab>
                 </Tabs>
-
+                <p>you clicked: {this.state.tab}</p>
             </div>
         );
     }

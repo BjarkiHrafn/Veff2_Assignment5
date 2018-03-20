@@ -21,7 +21,7 @@ class DatePicker extends React.Component {
         return(
             <div>
                 <label htmlFor = "date" >choose a date</label>
-                <input type = "date" name ="date" onChange = { () =>  { this.props.onDatePick() }}/>
+                <input type = "date" name ="date" onChange = { () =>  { this.props.onDatePick(this.state.date) }}/>
                 <div>
                     <input type = "text"/>
                 </div>

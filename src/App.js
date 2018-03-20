@@ -30,6 +30,7 @@ class App extends React.Component {
 
         this.openModal = this.openModal.bind(this);
         this.closeModal = this.closeModal.bind(this);
+        this.onDatePick = this.onDatePick.bind(this);
     }
 
     openModal() {
@@ -38,6 +39,10 @@ class App extends React.Component {
 
     closeModal() {
         this.setState({isOpen: false});
+    }
+
+    onDatePick(item) {
+        console.log("item: ", item);
     }
 
 

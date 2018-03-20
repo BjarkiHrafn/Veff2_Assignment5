@@ -12,7 +12,7 @@ class Modal extends React.Component{
 
 
     render() {
-    
+
         if(this.props.isOpen) {
             return (
                 <div className = {styles.modal}>
@@ -51,9 +51,9 @@ Modal.Footer = (props) => {
 };
 
 Modal.propTypes = {
-    isOpen: PropTypes.bool.isRequired,
-    onClose: PropTypes.func.isRequired,
-    children: PropTypes.node.isRequired,
+    isOpen: PropTypes.bool,
+    onClose: PropTypes.func,
+    children: PropTypes.node,
 };
 
 Modal.defaultProps = {

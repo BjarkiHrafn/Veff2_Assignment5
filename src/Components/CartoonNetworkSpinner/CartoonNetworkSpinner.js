@@ -29,7 +29,6 @@ class CartoonNetworkSpinner extends React.Component {
     }
 
     componentDidMount() {
-        console.log('state: ', this.state);
 
         setInterval( () => {
             if(this.state.spin === 'spin') {

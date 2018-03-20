@@ -30,7 +30,6 @@ class App extends React.Component {
 
         this.openModal = this.openModal.bind(this);
         this.closeModal = this.closeModal.bind(this);
-        this.onDatePick = this.onDatePick.bind(this);
     }
 
     openModal() {
@@ -41,13 +40,10 @@ class App extends React.Component {
         this.setState({isOpen: false});
     }
 
-    onDatePick(item) {
-        console.log("item: ", item);
-    }
-
 
     render() {
         //<Modal.Body>My Modal Body</Modal.Body>
+        const day = this.state.date;
 
         //<Modal.Footer>My Modal Footer</Modal.Footer>
 
@@ -133,8 +129,10 @@ class App extends React.Component {
                     ]}
                     size = 'medium'/>
                 <DatePicker
-                    onDatePick = {date => this.setState({date})}
+                    onDatePick = {date => this.setState({ date })}
                     locale = "en-EN" />
+
+                <h3>{day.toLocaleDateString()}</h3>
 
                 <Tabs
                     theme = "dark"

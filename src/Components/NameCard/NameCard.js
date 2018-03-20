@@ -22,8 +22,6 @@ class NameCard extends React.Component{
     render() {
         const {cardUrl} = this.props;
 
-
-        console.log(this.state.imgURl);
         return(
             <div className = {styles.card}>
                 <img src = {this.state.imgURl}className = {styles.img}/>

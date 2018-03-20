@@ -8,29 +8,21 @@ class Modal extends React.Component{
 
     constructor(props) {
         super(props);
-
-        this.state = {
-            openModal: false
-        }
-        this.closeModal = this.closeModal.bind(this);
     }
 
-    closeModal() {
-        this.props.onClose;
-    }
 
     render() {
-
-        if(this.state.openModal) {
+    
+        if(this.props.isOpen) {
             return (
                 <div className = {styles.modal}>
-                    <span className = {styles.close} onClick = { () => { this.setState({ openModal: false }); this.props.onClose() ; } }>&times;</span>
+                    <span className = {styles.close} onClick = { () => { this.props.onClose() ; } }>&times;</span>
                     <div className = {styles.modalContent}>{this.props.children}</div>
                 </div>
             );
         } else {
             return(
-                <button onClick = {() => { this.setState({ openModal: true }) }}>open zel modal</button>
+                <div></div>
             )
         }
     }
@@ -38,6 +30,7 @@ class Modal extends React.Component{
 };
 
 Modal.Title = (props) => {
+
     return (
         <div>{props.children}</div>
     )
@@ -48,14 +41,13 @@ Modal.Body = (props) => {
     return (
         <div>{props.children}</div>
     )
-
 };
 
 Modal.Footer = (props) => {
+
     return(
         <div>{props.children}</div>
     )
-
 };
 
 Modal.propTypes = {

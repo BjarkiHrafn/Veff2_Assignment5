@@ -62,7 +62,7 @@ class App extends React.Component {
                     <Modal.Body>My Modal Body</Modal.Body>
                     <Modal.Footer>My Modal Footer</Modal.Footer>
                 </Modal>
-                
+
 
                 <Progressbar
                     progress={25}

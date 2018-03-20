@@ -9,6 +9,8 @@ import ReactFileReader from 'react-file-reader';
 import Carousel from './Components/Carousel/Carousel.js';
 import Row from './Components/Row/Row';
 import Col from './Components/Col/Col';
+import TimePicker from './Components/TimePicker/TimePicker';
+import CartoonNetworkSpinner from './Components/CartoonNetworkSpinner/CartoonNetworkSpinner';
 import DatePicker from './Components/DatePicker/DatePicker';
 import Tabs from './Components/Tabs/Tabs';
 import Tab from './Components/Tabs/Tab';
@@ -23,9 +25,9 @@ class App extends React.Component {
         super(props);
         this.state = {
             isOpen: false,
+            time: 'time',
             date: new Date(),
             tab: 0,
-
         };
 
         this.openModal = this.openModal.bind(this);
@@ -128,6 +130,18 @@ class App extends React.Component {
                         'http://www.clipartbest.com/cliparts/xig/LzL/xigLzLA6T.jpg'
                     ]}
                     size = 'medium'/>
+
+                <TimePicker
+                    onTimePick={time => this.setState({time})}
+                    format={24} />
+                <TimePicker
+                    onTimePick={time => this.setState({time})}
+                    format={12} />
+                <p>{this.state.time}</p>
+
+                <CartoonNetworkSpinner
+                    interval={4} />
+
                 <DatePicker
                     onDatePick = {date => this.setState({ date })}
                     locale = "en-EN" />
@@ -143,6 +157,7 @@ class App extends React.Component {
                         Content 1
                     </Tab>
                 </Tabs>
+
             </div>
         );
     }

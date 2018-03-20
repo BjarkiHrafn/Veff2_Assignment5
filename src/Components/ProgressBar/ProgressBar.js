@@ -15,9 +15,10 @@ const ProgressBar = ({progress, striped, animated, state}) => {
     }
 
     // ${styles[`${animate}`]}
+    // <div style={{width: `${progress}%` }} className={`${styles.filler} ${styles[`${stripes}`]} ${styles[`${state}`]} ${styles[`${animate}`]}`}></div>
     return (
         <div className={`${styles.progressBar}`}>
-            <div style={{width: `${progress}%` }} className={`${styles[`${stripes}`]} ${styles.filler} ${styles[`${state}`]} ${styles[`${animate}`]}`}></div>
+            <div style={{width: `${progress}%` }} className={`${styles.filler} ${styles[`${stripes}`]} ${styles[`${state}`]} ${styles[`${animate}`]}`}></div>
         </div>
     );
 }

@@ -143,8 +143,9 @@ class App extends React.Component {
                     format={12} />
                 <p>{this.state.time}</p>
 
+                <CartoonNetworkSpinner/>
                 <CartoonNetworkSpinner
-                    interval={4} />
+                    interval={2} />
 
                 <DatePicker
                     onDatePick = {date => this.setState({date})}

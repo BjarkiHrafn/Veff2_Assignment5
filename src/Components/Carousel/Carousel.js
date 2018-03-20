@@ -7,7 +7,7 @@ class Carousel extends React.Component {
 
     constructor(props) {
         super(props);
-        
+
         this.state = ({
             slideIndex: 0,
             images: props.images,
@@ -62,7 +62,7 @@ class Carousel extends React.Component {
         return(
 
             <div className = {styles.slideshowContainer}>
-
+                <a className={styles.next} onClick={i => this.prevSlide(i)}>&#10095;</a>
                 {this.props.images.map((slide, index) =>
                     <CarouselSlide
                         key={index}
@@ -72,8 +72,6 @@ class Carousel extends React.Component {
                     />
                 )}
                 <a className={styles.prev} onClick={i => this.nextSlide(i)}>&#10094;</a>
-                <a className={styles.next} onClick={i => this.prevSlide(i)}>&#10095;</a>
-
             </div>
 
         );

@@ -1,11 +1,12 @@
 {
-  "name": "usa",
+  "name": "bjarkiogleifur",
   "version": "1.0.0",
-  "description": "",
+  "description": "t.b.e",
   "main": "./src/App.js",
   "scripts": {
     "start": "webpack-dev-server --config ./webpack.config.js --mode development --color",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "package": "webpack --config ./webpack.config.build.js"
   },
   "author": "",
   "license": "ISC",
